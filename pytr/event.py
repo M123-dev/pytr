@@ -526,7 +526,7 @@ class Event:
         ) = (None,) * 15
 
         value: Optional[float] = (
-            v if (v := event_dict.get("amount", {}).get("value", None)) is not None and v != 0.0 else None
+            v if (v := event_dict.get("amount", {}).get("value", None)) is not None else None
         )
 
         title = event_dict["title"]
