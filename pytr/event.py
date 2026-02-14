@@ -525,9 +525,7 @@ class Event:
             order_dict,
         ) = (None,) * 15
 
-        value: Optional[float] = (
-            v if (v := event_dict.get("amount", {}).get("value", None)) is not None else None
-        )
+        value: Optional[float] = v if (v := event_dict.get("amount", {}).get("value", None)) is not None else None
 
         title = event_dict["title"]
         subtitle = event_dict["subtitle"]
